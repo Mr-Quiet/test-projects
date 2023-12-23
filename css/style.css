@@ -284,14 +284,12 @@ body::after {
   line-height: 114.682%;
 }
 
-.page {
+.chat-page .page {
   display: -ms-grid;
   display: grid;
-}
-
-.chat-page .head {
-  display: -ms-grid;
-  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 .head__container {
@@ -306,7 +304,6 @@ body::after {
 
 .chat-page .head__container {
   width: 100%;
-  position: relative;
 }
 
 .head__body {
@@ -608,17 +605,8 @@ body::after {
 }
 
 .chat {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 6.25rem 1fr 4.0625rem;
-  grid-template-rows: 6.25rem 1fr 4.0625rem;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  position: relative;
   background-color: #fff;
-  width: 100%;
   border-radius: 1.625rem 1.625rem 0 0;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);

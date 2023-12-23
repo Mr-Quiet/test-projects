@@ -347,6 +347,14 @@
         const emailField = document.getElementById("emailField");
         const buttonSend = document.querySelector("#send");
         let currentStep = 1;
+        const isValidEmail = email => {
+            const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+            return emailRegex.test(email);
+        };
+        const isValidPhone = phone => {
+            const phoneRegex = /^\+?\d+$/;
+            return phoneRegex.test(phone);
+        };
         const smoothScroll = (start, end, duration) => {
             const startTime = (new Date).getTime();
             const animateScroll = () => {
@@ -371,25 +379,34 @@
             messagesList.appendChild(messageItem);
         };
         const askQuestion = () => {
+            const userInputValue = userInput.value.trim();
             switch (currentStep) {
               case 1:
                 appendAssistantMessage("Hello and welcome to our platform! I am your personal trading assistant. Before we begin, may I know your full name, please?");
                 break;
 
               case 2:
-                nameField.value = userInput.value.trim();
+                nameField.value = userInputValue;
                 appendUserMessage(nameField.value);
                 appendAssistantMessage(`Nice to meet you, ${nameField.value}! I'm here to guide you through our trading platform and help you make the most out of your investments. To get started, please provide your phone number.`);
                 break;
 
               case 3:
-                phoneField.value = userInput.value.trim();
+                if (!isValidPhone(userInputValue)) {
+                    alert("Please enter a valid phone number.");
+                    return;
+                }
+                phoneField.value = userInputValue;
                 appendUserMessage(phoneField.value);
                 appendAssistantMessage(`Great! Now, could you please provide your email address?`);
                 break;
 
               case 4:
-                emailField.value = userInput.value.trim();
+                if (!isValidEmail(userInputValue)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+                emailField.value = userInputValue;
                 appendUserMessage(emailField.value);
                 appendAssistantMessage(`Thank you for your application. Our managers will contact you shortly!`);
                 submitForm.click();

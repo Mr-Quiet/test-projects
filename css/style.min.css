@@ -172,7 +172,9 @@ body::after {
     -webkit-transition: -webkit-transform 0.3s ease 0s;
     transition: -webkit-transform 0.3s ease 0s;
     transition: transform 0.3s ease 0s;
-    transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+    transition:
+        transform 0.3s ease 0s,
+        -webkit-transform 0.3s ease 0s;
     padding: 20px;
     width: 100%;
     max-width: 900px;
@@ -265,6 +267,16 @@ body::after {
 }
 .chat-page .head__container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
 }
 .head__body {
     display: -webkit-box;

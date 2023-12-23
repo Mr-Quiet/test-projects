@@ -284,12 +284,8 @@ body::after {
   line-height: 114.682%;
 }
 
-.chat-page .page {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+.footer__container {
+  max-width: 34.375rem;
 }
 
 .head__container {

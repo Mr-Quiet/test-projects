@@ -607,11 +607,6 @@ body::after {
 }
 
 .chat {
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 6.25rem 1fr 4.0625rem;
-  grid-template-rows: 6.25rem 1fr 4.0625rem;
   background-color: #fff;
   width: 100%;
   border-radius: 1.625rem 1.625rem 0 0;

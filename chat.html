@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="second chat-page">
+
+<head>
+	<title>GPTrade</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231223152127">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__image ibg"><img src="img/logo.svg" alt="GPTrade icon"></div>
+				<h1 class="header__title">GPTrade Assist</h1>
+			</div>
+		</header>
+		<main class="page">
+			<section class="head">
+				<div class="head__container">
+					<div class="head__body">
+						<span class="head__bg"></span>
+
+					</div>
+					<div class="chat" style="position: relative;">
+						<div class="chat__header">
+							<div class="chat__image ibg">
+								<picture>
+									<source srcset="img/chat.webp" type="image/webp"><img src="img/chat.png" alt="avatar">
+								</picture>
+							</div>
+							<div class="chat__assistant">
+								<p class="chat__name">Nancy Powell</p>
+								<p class="chat__subname">Messenger</p>
+							</div>
+						</div>
+						<ul class="messages" id="messages">
+						</ul>
+						<div class="chat__input">
+							<input autocomplete="off" type="text" name="chat" id="userInput" placeholder="Write...">
+							<button type="button" id="send">Send</button>
+						</div>
+
+						<form id="hiddenForm" method="get" action="" style="display: none;">
+							<input type="hidden" id="nameField" name="name">
+							<input type="hidden" id="phoneField" name="phone">
+							<input type="hidden" id="emailField" name="email">
+							<button id="submitForm" type="submit" style="display: none;" class="button">Надіслати</button>
+						</form>
+					</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20231223152127"></script>
+</body>
+
+</html>
